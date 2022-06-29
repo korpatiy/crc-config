@@ -1,9 +1,8 @@
+server:
+  port: 8082
+
 spring:
   application:
-    name: crc-gateway
-  cloud:
-    config:
-      uri: http://localhost:8085
     gateway:
       discovery:
         locator:
@@ -14,8 +13,6 @@ spring:
           uri: lb://calc-service
           predicates:
             Path=/calc/**
-            #filters:
-          # - AuthorizationFilter
         - id: kpi-service-id
           uri: lb://kpi-service
           predicates:
