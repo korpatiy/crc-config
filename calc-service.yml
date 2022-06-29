@@ -6,4 +6,4 @@ eureka:
     service-url:
       defaultZone: http://localhost:8081/eureka
       
-greeting: Hi! From calc!
+greeting: Hi! From calc! 123
